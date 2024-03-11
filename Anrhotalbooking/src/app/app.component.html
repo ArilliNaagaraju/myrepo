@@ -1,0 +1,14 @@
+<form [formGroup]="loging">
+    <div id="log">
+      <h1>LOGIN</h1>
+      <input type="text" placeholder="Full Name" formControlName="Name" class="input-field name">
+      <input type="password" placeholder="Password" formControlName="password" class="input-field password">
+      <input type="password" placeholder="Confirm Password" formControlName="confPassword" class="input-field confpassword">
+      <button type="submit" class="submit-btn">Submit</button>
+      <button class="sing">
+        <a href="/sin" target="_parent">Signup</a>
+      </button>
+    </div>
+  </form>
+  <router-outlet></router-outlet>
+  
