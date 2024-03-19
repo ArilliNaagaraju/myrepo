@@ -1,0 +1,84 @@
+<!-- directiver-->
+<!--Attribute directives,Structural directives,compound directives-->
+<!--*ngif,*ngfor,*NgSwich   
+we can you the there types in the prgramming lug-->
+
+
+Structural directives
+<!--if-->
+<div *ngIf="false">Display data</div>
+<!--ngIfElse--> 
+<div *ngIf="isLogIn; else isLogOut"> 
+   Hello you are logged in 
+</div>
+<ng-template #isLogOut> 
+   You're logged out.. 
+</ng-template>
+<!--ngFor -->
+<ul> 
+   <li *ngFor="let l of list">
+      {{l}} 
+   </li>
+</ul>
+
+<!--NgSwitch-->
+<ul [ngSwitch]="logInName"> 
+   <li *ngSwitchCase="'user'"> 
+      <p>User is logged in..</p> 
+   </li> 
+   <li *ngSwitchCase="'admin'"> 
+      <p>admin is logged in</p> 
+   </li> 
+   <li *ngSwitchDefault> 
+      <p>Please choose login name</p> 
+   </li> 
+</ul>
+
+
+   Attribute directiver
+<!--In that two type -->
+<!--1)ngclass,2)ngstyle,ng-->
+
+<!--ngStyle-->
+<!--its can use to change the style sheet in the css and html-->
+<p [ngStyle]="{'color': 'blue', 'font-size': '50px'}"> 
+   paragraph style is applied using ngStyle 
+</p>
+<!--ngclass-->
+<!--fist you can import the import the ng class in compounnt in this comment(ng g class User)-->
+<div class="container"> 
+   <br/> 
+   <div *ngFor="let user of users" [ngClass]="{ 
+      'highlight':user.userName === 'User1' 
+   }"> 
+      {{ user.userName }} 
+   </div> 
+</div>
+
+<h3>ng-template</h3>
+
+<ng-template>ng-template tag is a virtual element</ng-template>
+
+<!---pipes-->
+<!--pipe is noting but its  Date..ext-->
+<div> 
+   Today's date :- {{presentDate | date}} 
+</div>
+<div> 
+   short date :- {{presentDate | date:'shortDate' }} <br/>
+   Full date :- {{presentDate | date:'fullDate' }} <br/> 
+   Formatted date:- {{presentDate | date:'M/dd/yyyy'}} <br/> 
+   Hours and minutes:- {{presentDate | date:'h:mm'}} 
+</div>
+<div> 
+   Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} <br/>
+   Date with lowercase :- {{presentDate | date:'medium' | lowercase}} <br/>  
+</div>
+<!--CurrencyPipe-->
+<div style="text-align:center"> 
+   <h3> Currency Pipe</h3> 
+   <p>{{ price | currency:'EUR':true}}</p> 
+   <p>{{ price | currency:'INR' }}</p> 
+</div> 
+<!--PercentPipe-->
+<P>{{amount | percent:'2.2'}}</P>

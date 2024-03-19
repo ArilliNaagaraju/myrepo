@@ -1,0 +1,112 @@
+<!--1)One-way data binding
+2)two way data binding-->
+ 
+ <!--          <table>
+               <tr>
+                  <td>
+
+                 {{ title }} 
+               </td>
+               <td>
+
+                 <button type="button" class="btn btn-primary">Edit</button>
+               </td>
+               </tr> 
+              <tr>
+               <td>
+                  <strong><em>Item:</em></strong>
+               </td> 
+               <td>
+                  {{ expenseEntry.item }}
+               </td> 
+              </tr>
+              <tr>
+               <td>
+                 <strong><em>Amount:</em></strong> 
+               </td> 
+               <td>
+                 {{ expenseEntry.amount }} 
+               </td> 
+            </tr>
+            <tr>
+             <td>
+                 <strong><em>Category:</em></strong> 
+               </td> 
+               <td>
+                 {{ expenseEntry.category }} 
+               </td> 
+            </tr>
+            <tr>
+             <td>
+                 <strong><em>Location:</em></strong> 
+               </td> 
+               <td>
+                 {{ expenseEntry.location }} 
+               </td> 
+            </tr>
+            <tr>
+             <td>
+                 <strong><em>Spend On:</em></strong>
+               </td> 
+               <td>
+                 {{ expenseEntry.spendOn }}
+               </td> 
+            </tr>
+               </table> -->
+<!--Batabinding
+ fist you can import the forms module in (app.module.ts)==> import{formsmodule}from'@angular/forma';-->
+
+ <!--eventdinding
+ <p>clickme:-{{clickcount}}</p>
+ <button (click)="clickme()">clickme</button>-->
+
+ <!--onewaydatabinding-->
+
+ <!--<h1>{{appName}}</h1>
+
+     Property binding-->
+
+ <!--<input type="text" [value]="appName">-->
+
+ <!--twowaydatabinding-->
+   <!-- the binging you can accesse the user
+   <input type="text" [(ngModel)]="appName" />
+   <P>{{name}}</P>-->
+
+
+
+  
+
+   
+<!-- table-form.component.html -->
+<div>
+  <h2>Add Student</h2>
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="newStudent.name"><br>
+  <label>Class:</label>
+  <input type="text" [(ngModel)]="newStudent.class"><br>
+  <label>Grade:</label>
+  <input type="text" [(ngModel)]="newStudent.grade"><br>
+  <button (click)="addStudent()">Add Student</button>
+</div>
+
+<div>
+  <h2>Students List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students" [ngClass]="getGradeColor(student.grade)">
+        <td>{{ student.name }}</td>
+        <td>{{ student.class }}</td>
+        <td>{{ student.grade }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+   <app-student></app-student>

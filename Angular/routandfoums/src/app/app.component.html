@@ -1,0 +1,14 @@
+<form [formGroup]="login">
+    <input type="text" placeholder="First Name" formControlName="firstname"><br>
+    <div *ngIf="login.get('firstname')?.invalid && login.get('firstname')?.touched"><br>
+        The minimum letter requirement is not met.
+    </div>
+    <input type="text" placeholder="Second Name" formControlName="secname"><br>
+    <input type="password" placeholder="Password" formControlName="password"><br>
+</form>
+<input list="sidebar">
+
+
+
+
+
