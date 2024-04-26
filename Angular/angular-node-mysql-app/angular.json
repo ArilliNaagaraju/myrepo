@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "loginpa": {
+    "angular-node-mysql-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/loginpa",
+            "outputPath": "dist/angular-node-mysql-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "loginpa:build:production"
+              "buildTarget": "angular-node-mysql-app:build:production"
             },
             "development": {
-              "buildTarget": "loginpa:build:development"
+              "buildTarget": "angular-node-mysql-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "loginpa:build"
+            "buildTarget": "angular-node-mysql-app:build"
           }
         },
         "test": {
@@ -98,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "11420f19-4a18-49ba-8315-eec5cc9021b9"
+    "analytics": "e9688121-629c-41f2-a764-f2cd664fc922"
   }
 }

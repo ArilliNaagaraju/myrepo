@@ -1,0 +1,12 @@
+<form (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="formData.password" required>
+  
+    <label for="confpassword">Confirm Password:</label>
+    <input type="password" id="confpassword" name="confpassword" [(ngModel)]="formData.confpassword" required>
+  
+    <button type="submit">Sign Up</button>
+</form>
