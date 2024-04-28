@@ -1,0 +1,83 @@
+.mean a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .fixed-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* bottom side login */
+.fixed-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6f6b6b;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px; /* Adjust spacing between top and bottom links */
+}
+
+.bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fixed-content:nth-of-type(1) .top-links a {
+  margin: 0 5px 10px; /* Adjust the space between each link */
+}
+
+.fixed-content:nth-of-type(2) .top-links a {
+  margin: 0 5px; /* Adjust the space between each link */
+}
+
+.fixed-content .bottom-links a {
+  margin: 0 5px; /* Adjust the space between each link */
+}
+input {
+  width: 100%; /* Adjust the width as needed */
+  padding: 9px; /* Add padding to make it visually more appealing */
+  font-size: 16px;
+  border-radius: 10px;
+}
+button{
+  width:50%;
+  padding: 4px;
+  font-size:16px;
+  border-radius:10px;
+}
+.login{
+  background-color: blue;
+  padding-right: 200px;
+  margin-top: 10px;
+  text-align: center;
+}
+.sigup{
+  background-color: green;
+  padding-right: 200px;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+}
+
