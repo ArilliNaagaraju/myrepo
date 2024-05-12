@@ -26,7 +26,7 @@ db.connect((err) => {
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors()); // Add this line to enable CORS
+app.use(cors()); 
 
 // Route to handle user signup
 app.post('/sign', (req, res) => {

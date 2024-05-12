@@ -1,15 +1,32 @@
-<div>
-    <div>
-        <label>Name</label>
-    <input type="text" placeholder="your full Name">
-    <label>Email</label>
-    <input type="gmail" placeholder="you@company.com">
-    <label>Briefly describe</label>
-    <input type="text" placeholder="project description">
-    </div>
-    <div>
-        <label>Select</label>
-        
-        <input type="checkbox">
-    </div>
-</div>
+<hr>
+<hr>
+<table>
+    <tr>
+        <td class="left-column">
+            <div>
+                <div>
+                    <label>Name</label>
+                    <input type="text" placeholder="Your full Name">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@company.com">
+                    <label>Briefly describe</label>
+                    <input type="text" placeholder="Project description">
+                </div>
+                <div>
+                    <label>Select</label><br>
+                    <input type="checkbox">Residential
+                    <input type="checkbox">Commercial
+                    <input type="checkbox">Renovation Services
+                    <input type="checkbox">Landscaping
+                    <input type="checkbox">Interior Design
+                    <input type="checkbox">Architectural Planning
+                </div>
+                <button>Contact us</button>
+            </div>
+        </td>
+        <td class="right-column">
+            <input type="file" name="image" id="image">
+        </td>
+    </tr>
+    <tr><td colspan="2"><button (click)="submitForm()">submit</button></td></tr>
+</table>

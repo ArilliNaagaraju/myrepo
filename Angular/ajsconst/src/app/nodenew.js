@@ -48,6 +48,24 @@ app.post('/signup', (req, res) => {
   });
 });
 
+// file uplodeing in the mysql//
+
+app.post('/submit', (req, res) => {
+  const { description, checkbox, image } = req.body;
+  // Save data to MySQL database
+  const query = 'INSERT INTO your_table (description, checkbox, image) VALUES (?, ?, ?)';
+  connection.query(query, [description, checkbox, image], (error, results, fields) => {
+    if (error) {
+      console.error('Error saving data to MySQL: ' + error);
+      res.status(500).send('Internal Server Error');
+      91
+      
+    } else {
+      res.status(200).send('Form data saved successfully');
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

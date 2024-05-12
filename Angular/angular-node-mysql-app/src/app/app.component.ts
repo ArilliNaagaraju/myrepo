@@ -11,15 +11,19 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-node-mysql-app';
-  username!: string;
-  password!: string;
+  showLogin: boolean = false;
+  showRegistration: boolean = false;
+  loginUsername: string = '';
+  loginPassword: string = '';
+  username: string = '';
+  email: string = '';
+  password: string = '';
   apiUrl = 'http://localhost:4200/register'; // Node.js backend API URL
 
   constructor(private http: HttpClient) { }
 
-  register() {
-    const user = { username: this.username, password: this.password };
+  registerr() {
+    const user = { username: this.username, email: this.email, password: this.password };
     this.http.post<any>(`${this.apiUrl}/register`, user)
       .subscribe(
         () => {
@@ -30,5 +34,9 @@ export class AppComponent {
           console.error('Error registering user:', error);
         }
       );
+  }
+title="nagagaraju"
+  login() {
+    // Implement login functionality here
   }
 }

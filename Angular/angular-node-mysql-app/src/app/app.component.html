@@ -1,8 +1,36 @@
-<h2>Register</h2>
-<form (ngSubmit)="register()">
-  <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username" [(ngModel)]="username"><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" [(ngModel)]="password"><br><br>
-  <button type="submit">Register</button>
-</form>
+<div (mouseenter)="showLogin = true; showRegistration = false" (mouseleave)="showLogin = false" [hidden]="showRegistration">
+  <div class="form-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <label for="loginUsername">Username:</label><br>
+      <input type="text" id="loginUsername" name="loginUsername" [(ngModel)]="loginUsername"><br>
+      <label for="loginPassword">Password:</label><br>
+      <input type="password" id="loginPassword" name="loginPassword" [(ngModel)]="loginPassword"><br><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+
+<div (mouseenter)="showRegistration = true; showLogin = false" (mouseleave)="showRegistration = false" [hidden]="showLogin">
+  <div class="registration-container">
+    <h2>Registration Form</h2>
+    <form (ngSubmit)="registerr()">
+      <label for="regUsername">Username:</label><br>
+      <input type="text" id="regUsername" name="regUsername" [(ngModel)]="username"><br>
+      <label for="regEmail">Email:</label><br>
+      <input type="email" id="regEmail" name="regEmail" [(ngModel)]="email"><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+
+<div class="det">
+  <form>
+    <input type="text" placeholder="Full Name">
+    <input type="text" placeholder="Last Name">
+    <input type="text" placeholed="">
+    <input type="Number" placeholed="Number">
+    <input type="button">
+  </form>
+</div>
