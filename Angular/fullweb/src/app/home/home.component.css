@@ -1,0 +1,29 @@
+/* cont form */
+
+.contact-info {
+    background-color: #545252;
+    padding: 20px;
+    text-align: center;
+    margin-top: 90%;
+    color:rgb(11, 248, 236)
+}
+
+.contact-info h5 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}

@@ -1,0 +1,61 @@
+/* login.component.css */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d8c9b; /* Light cyan background */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login {
+    background-color: #208068; /* White background for the form */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Soft shadow for a modern look */
+    text-align: center;
+    width: 300px;
+}
+
+.login h2 {
+    margin-bottom: 20px;
+    color: #31c9b7; /* Teal color for the header */
+}
+
+.login label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #191b1b;
+    font-size: 20PX;/* Teal color for the labels */
+}
+
+.login input[type="text"], .login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #28d0df;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login input[type="text"]::placeholder, .login input[type="password"]::placeholder {
+    color: #1e9ec9; /* Placeholder text color */
+}
+#log{
+    color: rgb(232, 20, 20);
+}
+.butt{
+    padding: 20px;
+}
+#sub,sig{
+    padding: 5px 30px;
+    background-color: rgb(222, 11, 11);
+    border-radius: 6px;
+}
+#sig{
+    padding: 5px 30px;
+    background-color: rgb(67, 222, 11);
+    border-radius: 6px;
+}

@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #00796b; /* Teal color for the header background */
+    color: #ffffff; /* White text color */
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-button,
+.auth-button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.nav-button a,
+.auth-button a {
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+}
+
+.nav-button:hover,
+.auth-button:hover {
+    background-color: #004d40; /* Darker teal color on hover */
+}
+
+
+.mar {
+    background-color: cadetblue;
+    color: #f3f3f3;
+    font-size: 30px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marquee-text {
+    white-space: nowrap;
+}
+

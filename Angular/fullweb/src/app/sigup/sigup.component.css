@@ -1,0 +1,66 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #10886e; /* Light, pleasing background color */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sign {
+    background-color: #20b1a7; /* White background for the form */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+    text-align: center;
+    width: 300px;
+}
+
+.sign h2 {
+    margin-bottom: 20px;
+    color: #00796b; /* Teal color for the header */
+}
+
+.sign label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #010101; /* Teal color for the labels */
+}
+
+.sign input[type="text"], 
+.sign input[type="number"], 
+.sign input[type="email"], 
+.sign input[type="password"] 
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.sign input[type="text"]::placeholder,
+.sign input[type="number"]::placeholder, 
+.sign input[type="email"]::placeholder, 
+.sign input[type="password"]::placeholder 
+{
+    color: #11c9f3; /* Placeholder text color */
+}
+#sig{
+    color: red;
+    font-size: 20px;
+}
+
+#sub{
+    padding: 5px 30px;
+    background-color: rgb(222, 11, 11);
+    border-radius: 6px;
+}
+#si{
+    padding: 5px 30px;
+    background-color: rgb(67, 222, 11);
+    border-radius: 6px;
+}
