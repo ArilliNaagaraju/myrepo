@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { SigupComponent } from './sigup/sigup.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { GetputComponent } from './getput/getput.component';
 
 export const routes: Routes = [
     {
@@ -16,5 +17,8 @@ export const routes: Routes = [
     },
     {
         path:"about",component:AboutComponent
+    },
+    {
+        path:"getput",component:GetputComponent
     }
 ];

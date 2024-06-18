@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div>
     <img src="https://www.exchange4media.com/news-photo/120488-113503-112466-Bookmyshow.webp" alt="Bookmyshow">
   </div>
@@ -6,11 +6,11 @@
     <input type="text" placeholder="Search for Movies, Events, Plays, Sports, and Activities">
   </div>
   <div>
-    <button>Sign in</button>
+    <button>Sign in</button><
   </div>
   <div>
     <button id="icon">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu">menu</mat-icon>
     </button>
   </div>
 </div>
@@ -33,6 +33,39 @@
     <div>Gift Cards</div>
   </div>
 
+</div> -->
+<div class="container">
+  <div>
+    <img src="https://www.exchange4media.com/news-photo/120488-113503-112466-Bookmyshow.webp" alt="Bookmyshow">
+  </div>
+  <div>
+    <input type="text" placeholder="Search for Movies, Events, Plays, Sports, and Activities">
+  </div>
+  <div>
+    <button (click)="openSignInDialog()">Sign in</button>
+  </div>
+  <div>
+    <button id="icon">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu">menu</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div class="cont">
+  <div class="left">
+    <div><a href="/listyourshow">Movies</a> </div>
+    <div><a href="/#">Stream</a></div>
+    <div>Events</div>
+    <div>Plays</div>
+    <div>Sports</div>
+    <div>Activities</div>
+  </div>
+  <div class="right">
+    <div><a href="/#">List your Show</a></div>
+    <div>Corporates</div>
+    <div>Offers</div>
+    <div>Gift Cards</div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

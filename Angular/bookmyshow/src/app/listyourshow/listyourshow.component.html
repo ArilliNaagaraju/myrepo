@@ -1,54 +1,46 @@
 <div class="container">
-    <div class="language-selector">
-        <label class="lab" (click)="toggleButtons()">Language</label>
-        <div class="buttons" [style.display]="showButtons ? 'block' : 'none'">
-            <button>Hindi</button>
-            <a href="telugu"><button>Telugu</button></a>
-            <button>Tamil</button>
-            <button>Kannada</button>
-            <button>Malayalam</button>
-            <button>English</button>
-            <button>Marathi</button>
-            <button>Bengali</button>
-            <button>Punjabi</button>
+    <div class="selectors">
+        <div class="language-selector">
+            <label class="lab" (click)="toggleButtons()">Language</label>
+            <div class="buttons" [style.display]="showButtons ? 'block' : 'none'">
+                <button >Hindi</button>
+                <a href="telugu"><button >Telugu</button></a>
+                <button >Tamil</button>
+                <button >Kannada</button>
+                <button >Malayalam</button>
+                <button >English</button>
+                <button >Marathi</button>
+                <button >Bengali</button>
+                <button >Punjabi</button>
+            </div>
         </div>
-    </div>
 
-    <div class="gen">
-        <label class="genrt" (click)="toggleGenres()">Genres</label>
-        <div class="buttons" [style.display]="showGenres ? 'block' : 'none'">
-            <button>Comedy</button>
-            <button>Drama</button>
-            <button>Action</button>
-            <button>Thriller</button>
-            <button>Romantic</button>
-            <button>Adventure</button>
-            <button>Anime</button>
+        <div class="gen">
+            <label class="genrt" (click)="toggleGenres()">Genres</label>
+            <div class="buttons" [style.display]="showGenres ? 'block' : 'none'">
+                <button>Comedy</button>
+                <button>Drama</button>
+                <button>Action</button>
+                <button>Thriller</button>
+                <button>Romantic</button>
+                <button>Adventure</button>
+                <button>Anime</button>
+            </div>
         </div>
-    </div>
 
-    <div class="format">
-        <label class="forma" (click)="toggleFormats()">Format</label>
-        <div class="buttons" [style.display]="showFormats ? 'block' : 'none'">
-            <button>2D</button>
-            <button>3D</button>
-            <button>4DX</button>
-            <button>IMAX 2D</button>
-            <button>MX4D</button>
-            <button>2D SCREEN X</button>
-            <button>IMAX 3D</button>
-            <button>ICE</button>
+        <div class="format">
+            <label class="forma" (click)="toggleFormats()">Format</label>
+            <div class="buttons" [style.display]="showFormats ? 'block' : 'none'">
+                <button>2D</button>
+                <button>3D</button>
+                <button>4DX</button>
+                <button>IMAX 2D</button>
+                <button>MX4D</button>
+                <button>2D SCREEN X</button>
+                <button>IMAX 3D</button>
+                <button>ICE</button>
+            </div>
         </div>
     </div>
 </div>
 
-
-
-<div>
-    <div class="tamil">
-
-    </div>
-    
-    <div class="hindi">
-
-    </div>

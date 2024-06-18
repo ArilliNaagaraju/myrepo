@@ -12,5 +12,7 @@ import { SignComponent } from "./sign/sign.component";
 })
 export class AppComponent {
   title = 'loginpa';
+  presentDate = new Date(); 
+  date="";
 }
 

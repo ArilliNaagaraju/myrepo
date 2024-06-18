@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  /*title!: string; 
+  title!: string; 
    expenseEntry: any; 
    constructor() { } 
    ngOnInit() { 
@@ -26,36 +26,7 @@ export class AppComponent {
    appName = "NAGARAJU";
    myCSSClass = "red"; 
    applyCSSClass = false; 
-   name="nagaraju";*/
+   name="nagaraju";
 
 
-   newStudent = {
-      name: '',
-      class: '',
-      grade: ''
-    };
-    students: any[] = [];
-  
-    addStudent() {
-
-      this.students.push({ ...this.newStudent });
-      this.newStudent = {
-        name: '',
-        class: '',
-        grade: ''
-      };
-    }
-  
-    getGradeColor(grade: string) {
-      switch (grade) {
-        case 'A+':
-          return 'grade-Aplus';
-        case 'B':
-          return 'grade-B';
-        case 'F':
-          return 'grade-F';
-        default:
-          return '';
-      }
-    }
-}
+ 

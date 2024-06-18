@@ -1,0 +1,90 @@
+<!-- what is data base  this database is the connect the companect and html doms -->
+<!-- one way databinding -->
+<p>{{title}}</p>
+<!-- Event binding -->
+<!-- mouse click, double click, hover or any keyboard and mouse actions   It is denoted by either parenthesis () -->
+<h2>Event Binding</h2> 
+<button (click)="showData($event)">Click here</button>
+<!-- Property binding  [] -->
+<input type="text" [value]="Name">
+<!-- Attribute binding  -->
+<!-- <HTMLTag [attr.ATTR]="Component data"></HTMLTag> -->
+<!-- Class binding -->
+<p [class]="myCSSClass">This paragraph class comes from *myClass* property </p>
+<p [class.blue]="applyCSSClass">This paragraph class does not apply</p>`
+
+<!-- Style binding -->
+<p [style.color]="myColor">Text color is styled using style binding</p>
+
+<!-- NgModel -->
+<input type="text" [(ngModel)]="userName" />
+<p>Two way binding! Hello {{ userName }}!</p>
+
+<!-- Directives -->
+//1.Structural directives----->1.ngif  2.ngifelse  3.ngfor  4.ngswitch
+//2.Attribute directives------>1.ngstyle 2.ngclass 
+//3.Custom directives
+//4.Component directives
+
+<h1>Directives</h1>
+<!-- Structural directives -->
+<p>test works!</p> 
+<div If="false">Display data</div>
+@if(false){
+  display data
+}
+
+@if(isLogIn){
+  helloyou are logged in
+}@else{
+  notlogin
+}
+
+<ul>
+@for(items of item;track item){
+  <li>{{items}}</li>
+}
+</ul>
+
+@switch(color){
+@case("red"){
+  <h1>red</h1>
+}
+@case("blue"){
+  <h1>blue</h1>
+}
+}
+
+<!-- Attribute directives  -->
+<!-- ngStyle directive -->
+<p [ngStyle]="{'color': 'blue', 'font-size': '14px'}"> 
+  paragraph style is applied using ngStyle 
+</p>
+
+<!-- Custom directives -->
+<!-- ng generate directive customstyle -->
+
+
+<!-- Services and Dependency Injection -->
+<h1>Services and Dependency Injection</h1>
+<!-- one items can use the all the components its means
+you have not repated the all the times  -->
+
+<!-- <ul>
+  @for(mobile of mobiles;track mobiles){
+    <li>{{mobile}}</li>
+  }
+  </ul> -->
+
+  
+  <!-- Http Client Programming -->
+  <!-- fist you can import the HTTP Clientmodule -->
+  <button (click)="getdata()"> getdata</button>
+  <!-- <p>{{}}</p> -->
+<a routerLink="wert">myname</a><br>
+<a routerLink="rought">rought</a>
+<a routerLink="">Home</a><br>
+<a routerLink="sidebar" class="cursor-pointer">Dashboad</a><br>
+<a routerLink="Login" class="cursor-pointer">Login</a>
+
+<router-outlet></router-outlet> 

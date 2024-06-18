@@ -1,14 +1,19 @@
 .container {
     display: flex;
-    flex-direction: column;
     margin: 10px;
+    display: flex;
+}
+
+.selectors {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
 
 .language-selector, .gen, .format {
     padding: 20px;
     border-radius: 10px;
     background-color: #f0f0f0;
-    width: 30%;
     margin: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
@@ -25,7 +30,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    
 }
 
 .buttons button {
@@ -41,5 +45,21 @@
 
 .buttons button:hover {
     background-color: #2bc02b;
-    
+}
+
+.images {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.telugu {
+    margin-top: 20px;
+}
+
+.telugu table {
+    width: 100%;
+}
+
+.telugu td {
+    padding: 10px;
 }

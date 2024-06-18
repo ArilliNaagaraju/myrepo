@@ -1,0 +1,289 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "kjhg": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/kjhg",
+      "sourceRoot": "projects/kjhg/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/kjhg",
+            "index": "projects/kjhg/src/index.html",
+            "browser": "projects/kjhg/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/kjhg/tsconfig.app.json",
+            "assets": [
+              "projects/kjhg/src/favicon.ico",
+              "projects/kjhg/src/assets"
+            ],
+            "styles": [
+              "projects/kjhg/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/kjhg/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/kjhg/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "kjhg:build:production"
+            },
+            "development": {
+              "buildTarget": "kjhg:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "kjhg:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/kjhg/tsconfig.spec.json",
+            "assets": [
+              "projects/kjhg/src/favicon.ico",
+              "projects/kjhg/src/assets"
+            ],
+            "styles": [
+              "projects/kjhg/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "naga": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/naga",
+      "sourceRoot": "projects/naga/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/naga",
+            "index": "projects/naga/src/index.html",
+            "browser": "projects/naga/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/naga/tsconfig.app.json",
+            "assets": [
+              "projects/naga/src/favicon.ico",
+              "projects/naga/src/assets"
+            ],
+            "styles": [
+              "projects/naga/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/naga/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/naga/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "naga:build:production"
+            },
+            "development": {
+              "buildTarget": "naga:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "naga:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/naga/tsconfig.spec.json",
+            "assets": [
+              "projects/naga/src/favicon.ico",
+              "projects/naga/src/assets"
+            ],
+            "styles": [
+              "projects/naga/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "gpdumethod": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/gpdumethod",
+      "sourceRoot": "projects/gpdumethod/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/gpdumethod",
+            "index": "projects/gpdumethod/src/index.html",
+            "browser": "projects/gpdumethod/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/gpdumethod/tsconfig.app.json",
+            "assets": [
+              "projects/gpdumethod/src/favicon.ico",
+              "projects/gpdumethod/src/assets"
+            ],
+            "styles": [
+              "projects/gpdumethod/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/gpdumethod/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/gpdumethod/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "gpdumethod:build:production"
+            },
+            "development": {
+              "buildTarget": "gpdumethod:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "gpdumethod:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/gpdumethod/tsconfig.spec.json",
+            "assets": [
+              "projects/gpdumethod/src/favicon.ico",
+              "projects/gpdumethod/src/assets"
+            ],
+            "styles": [
+              "projects/gpdumethod/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "ccbe96cc-5564-41e0-bece-821e650fa4a1"
+  }
+}

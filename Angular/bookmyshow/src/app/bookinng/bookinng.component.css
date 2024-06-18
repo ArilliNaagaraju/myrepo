@@ -1,0 +1,59 @@
+.movie-card {
+    display: flex;
+    background-color: #222; 
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding:20px ;
+    padding-left: 10%;
+}
+.poster img {
+    height: 400px;
+}
+
+.details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.info {
+    margin: 20px 0;
+}
+.info button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+.book-tickets {
+    padding: 10px;
+    background-color: #f04;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.inf{
+    margin: 30px;
+    background-color: rgba(228, 231, 233, 0.304);
+}
+
+
