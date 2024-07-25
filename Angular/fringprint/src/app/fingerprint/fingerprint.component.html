@@ -1,0 +1,5 @@
+<div>
+    <button (click)="scanFingerprint()">Scan Fingerprint</button>
+    <pre>{{ fingerprintData | json }}</pre>
+    <button (click)="saveFingerprint()" [disabled]="!fingerprintData">Save Fingerprint</button>
+</div>

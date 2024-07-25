@@ -14,6 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent {
   title = 'bookmyshow';
+value: any;
   constructor(public dialog: MatDialog) {}
 
   openSignInDialog(): void {

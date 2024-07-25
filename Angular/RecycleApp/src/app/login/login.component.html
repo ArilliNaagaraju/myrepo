@@ -1,0 +1,53 @@
+<div class="form-container">
+  <div class="form-content">
+    <div class="form-header">
+      <span (click)="toggleForm('signIn')" [class.active]="isSignIn">Sign In</span>
+      <span (click)="toggleForm('signUp')" [class.active]="!isSignIn">Sign Up</span>
+    </div>
+
+    <!-- Sign In Form -->
+<div *ngIf="isSignIn">
+  <form (ngSubmit)="onSignIn()">
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" [(ngModel)]="signInEmail" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" [(ngModel)]="signInPassword" name="password" required>
+      <a href="/forgetpassword" class="forgot-password">Forget Password</a>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+  
+  </form>
+  <div class="social-login">
+    <button class="btn btn-google">Login with Google</button>
+    <button class="btn btn-apple">Login with Apple</button>
+  </div>
+</div>
+
+
+    <!-- Sign Up Form -->
+    <div *ngIf="!isSignIn">
+      <form (ngSubmit)="onSignUp()">
+        <div class="form-group">
+          <label for="signUpEmail">Email Address</label>
+          <input type="email" id="signUpEmail" [(ngModel)]="signUpEmail" name="signUpEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="signUpPassword">Password</label>
+          <input type="password" id="signUpPassword" [(ngModel)]="signUpPassword" name="signUpPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <div class="social-login">
+        <button class="btn btn-google">Login with Google</button>
+        <button class="btn btn-apple">Login with Apple</button>
+      </div>
+    </div>
+  </div>
+</div>
