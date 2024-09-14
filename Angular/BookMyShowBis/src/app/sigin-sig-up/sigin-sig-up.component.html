@@ -1,0 +1,29 @@
+<div class="sigup">
+    <div class="sig">
+      <label class="sigp" (click)="showSignUp()">SIGN UP</label>
+      <label class="sigi" (click)="showSignIn()">SIGN IN</label>
+    </div>
+  
+    <!-- Sign Up Form -->
+    <div *ngIf="isSignUp">
+      <form (ngSubmit)="onSignup()">
+        <input type="text" placeholder="User Name" [(ngModel)]="signupForm.username" [ngModelOptions]="{standalone: true}" required>
+        <input type="email" placeholder="Gmail" [(ngModel)]="signupForm.gmail" [ngModelOptions]="{standalone: true}" required>
+        <input type="password" placeholder="Password" [(ngModel)]="signupForm.password" [ngModelOptions]="{standalone: true}" required>
+        <input type="text" placeholder="Name Of the Theater" [(ngModel)]="signupForm.theaterName" [ngModelOptions]="{standalone: true}" required>
+        <input type="text" placeholder="Name of the Movie" [(ngModel)]="signupForm.movieName" [ngModelOptions]="{standalone: true}" required>
+        <input type="number" placeholder="Number of the Moviehall" [(ngModel)]="signupForm.moviehall" [ngModelOptions]="{standalone: true}" required>
+        <input type="text" placeholder="Name of the Area" [(ngModel)]="signupForm.area" [ngModelOptions]="{standalone: true}" required>
+        <button type="submit">SIGN UP</button>
+      </form>
+    </div>
+  
+    <!-- Sign In Form -->
+    <div *ngIf="!isSignUp">
+      <form (ngSubmit)="onSignin()">
+        <input type="email" placeholder="Gmail" [(ngModel)]="signinForm.gmail" [ngModelOptions]="{standalone: true}" required>
+        <input type="password" placeholder="Password" [(ngModel)]="signinForm.password" [ngModelOptions]="{standalone: true}" required>
+        <button type="submit">SIGN IN</button>
+      </form>
+    </div>
+</div>

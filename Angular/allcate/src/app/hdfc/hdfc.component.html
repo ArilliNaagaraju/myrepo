@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="content">
+    <!-- Header Section -->
+    <div class="header-row">
+      <img [src]="bankDetails.logo" alt="{{ bankDetails.name }}">
+      <div *ngIf="bankDetails">
+        <h1>{{ bankDetails.name }}</h1>
+        <p>Trust Score: {{ bankDetails.trustscore }}</p>
+        <p>Reviews: {{ bankDetails.reviews }}</p>
+        <div class="stars">
+          <span *ngFor="let star of [1, 2, 3, 4, 5]" class="star" [class.filled]="star <= bankDetails.trustscore">★</span>
+        </div>
+      </div>
+    </div>
+    <div class="action-row">
+      <a [href]="bankDetails.website" target="_blank">
+        <button class="visit-button">Visit this website</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="recentreviews">
+  <app-review [bankId]="bankDetails.id"></app-review>
+</div>

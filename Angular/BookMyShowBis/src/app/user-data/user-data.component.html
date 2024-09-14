@@ -1,0 +1,70 @@
+<div>
+    <h2>{{ movieName }}</h2>
+    <p>Number of Movie Halls: {{ numberOfHalls }}</p>
+
+    <form [formGroup]="seatingForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="totalSeats">Total Seats:</label>
+            <input type="number" id="totalSeats" formControlName="totalSeats">
+        </div>
+
+        <div>
+            <label for="leftTotalSeats">Total Seats for Left Side:</label>
+            <input type="number" id="leftTotalSeats" formControlName="leftTotalSeats">
+        </div>
+        <div>
+            <label for="leftColumns">Total Columns for Left Side:</label>
+            <input type="number" id="leftColumns" formControlName="leftColumns" (change)="onLeftColumnsChange($event)">
+        </div>
+        <div formArrayName="leftRows">
+            <div *ngFor="let row of leftRows.controls; let i = index" [formGroupName]="i">
+                <label for="leftSeats{{i}}">Seats in row {{i + 1}}:</label>
+                <input type="number" id="leftSeats{{i}}" formControlName="seats">
+                <label for="leftRows{{i}}">Rows in column {{i + 1}}:</label>
+                <input type="number" id="leftRows{{i}}" formControlName="rows">
+            </div>
+        </div>
+        <button type="button" (click)="addLeftRow()">Add Left Side Rows</button>
+        <button type="button" (click)="skip()">Skip</button>
+
+        <div>
+            <label for="middleTotalSeats">Total Seats for Middle:</label>
+            <input type="number" id="middleTotalSeats" formControlName="middleTotalSeats">
+        </div>
+        <div>
+            <label for="middleColumns">Total Columns for Middle:</label>
+            <input type="number" id="middleColumns" formControlName="middleColumns" (change)="onMiddleColumnsChange($event)">
+        </div>
+        <div formArrayName="middleRows">
+            <div *ngFor="let row of middleRows.controls; let i = index" [formGroupName]="i">
+                <label for="middleSeats{{i}}">Seats in row {{i + 1}}:</label>
+                <input type="number" id="middleSeats{{i}}" formControlName="seats">
+                <label for="middleRows{{i}}">Rows in column {{i + 1}}:</label>
+                <input type="number" id="middleRows{{i}}" formControlName="rows">
+            </div>
+        </div>
+        <button type="button" (click)="addMiddleRow()">Add Middle Rows</button>
+        <button type="button" (click)="skip()">Skip</button>
+
+        <div>
+            <label for="rightTotalSeats">Total Seats for Right Side:</label>
+            <input type="number" id="rightTotalSeats" formControlName="rightTotalSeats">
+        </div>
+        <div>
+            <label for="rightColumns">Total Columns for Right Side:</label>
+            <input type="number" id="rightColumns" formControlName="rightColumns" (change)="onRightColumnsChange($event)">
+        </div>
+        <div formArrayName="rightRows">
+            <div *ngFor="let row of rightRows.controls; let i = index" [formGroupName]="i">
+                <label for="rightSeats{{i}}">Seats in row {{i + 1}}:</label>
+                <input type="number" id="rightSeats{{i}}" formControlName="seats">
+                <label for="rightRows{{i}}">Rows in column {{i + 1}}:</label>
+                <input type="number" id="rightRows{{i}}" formControlName="rows">
+            </div>
+        </div>
+        <button type="button" (click)="addRightRow()">Add Right Side Rows</button>
+
+        <button type="button" (click)="skip()">Skip</button>
+        <button type="submit">Submit</button>
+    </form>
+</div>

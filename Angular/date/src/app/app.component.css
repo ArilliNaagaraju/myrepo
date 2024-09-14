@@ -1,0 +1,49 @@
+/* .time-picker-container {
+    margin: 20px;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.time-labels span {
+    flex: 1;
+    text-align: center;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #555;
+} */
+
+
+
+.time-picker-container {
+    margin: 20px;
+}
+
+.time-picker-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.time-labels {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Space between labels and input */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.time-labels span {
+    text-align: center;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #555;
+}

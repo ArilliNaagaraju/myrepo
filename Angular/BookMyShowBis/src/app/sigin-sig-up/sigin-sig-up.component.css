@@ -1,0 +1,44 @@
+.sigup {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(131, 208, 208);
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+   margin-top: 200px;
+   margin-left: 40%;
+   flex-direction: column;
+   border-radius: 20px;
+}
+input{
+    padding:8px;
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+button{
+    padding:8px;
+    width: 90%;
+    border-radius: 8px;
+    background-color: blue;
+    margin-left: 20px;
+}
+
+button:hover{
+    background-color: rgb(16, 179, 16);
+}
+.sig{
+    font-size: 150%;
+    margin-bottom: 40px;
+}
+.sigp{
+    margin-left: 20px;
+}
+.sigi{
+    margin-left: 120px;
+}
+.forgot{
+    margin-left: 20px;
+}

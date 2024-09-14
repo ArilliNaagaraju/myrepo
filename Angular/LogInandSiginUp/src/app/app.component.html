@@ -1,0 +1,45 @@
+<div>
+  <!-- <div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+      <input type="text"
+      placeholder="UserName"
+      min="4"
+      maxlength="9"
+      name="UserName"
+      ngModel
+      required
+      #na="ngModel"
+      >
+      
+      <div *ngif="name.invalid && name.touched">UserName is required</div>
+
+      <input type="password" placeholder="Password">
+      <button (click)="na">Login</button>
+    </form>  
+  </div> -->
+  
+  
+<!-- app.component.html -->
+<form #form="ngForm" (ngSubmit)="onSubmit(user)">
+  <input type="text" [(ngModel)]="user.name" name="name" placeholder="Name" required />
+  <input type="email" [(ngModel)]="user.email" name="email" placeholder="G-mail" required />
+  <input type="password" [(ngModel)]="user.password" name="password" placeholder="Password" required />
+  <input type="password" [(ngModel)]="user.confPassword" name="confPassword" placeholder="Conf-Password" required />
+
+  <div *ngIf="user.password === user.confPassword; else notMatched">
+    Passwords match!
+  </div>
+  
+  <ng-template #notMatched>
+    Password is not matched, please check!
+  </ng-template>
+  
+  <button type="submit">Sign Up</button>
+</form>
+
+</div>
+
+
+
+<app-child [parentData]="message"></app-child>

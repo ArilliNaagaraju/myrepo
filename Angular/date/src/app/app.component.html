@@ -1,0 +1,171 @@
+<!-- <div class="col-md-3 p-2">
+  <label for="startDate" class="form-label required">Start Date and Time</label>
+  <div class="input-fields">
+    <input
+      type="datetime-local"
+      class="form-control form-control-sm"
+      id="start_date"
+      formControlName="start_date"
+      (change)="onDateChange()"
+    />
+    <div *ngIf="startTime" class="time-display">
+      <div class="time-box">
+        <span class="time-value">{{ startTime.hours }}</span>
+        <span class="time-label" placeholder="hours">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value">{{ startTime.minutes }}</span>
+        <span class="time-label">Minutes</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-3 p-2">
+  <label for="endDate" class="form-label required">End Date and Time</label>
+  <div class="d-flex flex-column">
+    <input
+      type="datetime-local"
+      class="form-control form-control-sm"
+      id="end_date"
+      formControlName="end_date"
+      (change)="onDateChange()"
+    />
+    <div *ngIf="endTime" class="time-display">
+      <div class="time-box">
+        <span class="time-value">{{ endTime.hours }}</span>
+        <span class="time-label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value">{{ endTime.minutes }}</span>
+        <span class="time-label">Minutes</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="col-md-3 p-2">
+  <label for="startDate" class="form-label required">Start Date and Time</label>
+  <div class="input-fields"> -->
+  <!-- <label class="form-label">Hours</label> -->
+  <!-- <input
+    type="datetime-local"
+    class="form-control form-control-sm"
+    id="start_date"
+    formControlName="start_date"
+  />
+</div>
+</div>
+<div class="col-md-3 p-2">
+  <label for="endDate" class="form-label required">End Date and Time</label>
+  <div class="d-flex flex-column">
+    <label class="form-label">Hours</label>
+  <input
+    type="datetime-local "
+    class="form-control form-control-sm"
+    id="end_date"
+    formControlName="end_date"
+   
+  />
+</div>
+</div> -->
+
+<!-- <label for="datetime">Date and Time</label>
+<input type="datetime-local" id="datetime" [(ngModel)]="selectedDateTime" (change)="onDateTimeChange()" />
+
+<div *ngIf="hours !== undefined && minutes !== undefined">
+  <p>Hours: {{ hours }}</p>
+  <p>Minutes: {{ minutes }}</p>
+</div> -->
+
+
+<!-- <div class="time-picker-container">
+  <label for="appointment-time">Select a time for your appointment:</label>
+  <input 
+      type="datetime-local" 
+      id="appointment-time" 
+      name="appointment-time" 
+      (focus)="showLabels = true" 
+      (blur)="showLabels = false"
+      (change)="onTimeChange($event)">
+  <div *ngIf="showLabels" class="time-labels">
+      <span>Hours</span>
+      <span>Minutes</span>
+  </div>
+  <p class="description">Please select a time between 09:00 AM and 05:00 PM. Hours and minutes are displayed for clarity.</p>
+</div> -->
+
+
+<!-- <div class="time-picker-container">
+  <label for="appointment-time">Select a time for your appointment:</label>
+  <div class="time-picker-wrapper">
+      <div *ngIf="showLabels" class="time-labels">
+          <span>Hours</span>
+          <span>Minutes</span>
+      </div>
+      <input 
+          type="datetime-local" 
+          id="appointment-time" 
+          name="appointment-time" 
+          (focus)="showLabels = true" 
+          (blur)="showLabels = false"
+          (change)="onTimeChange($event)">
+  </div>
+  <p class="description">Please select a time between 09:00 AM and 05:00 PM. Hours and minutes are displayed for clarity.</p>
+</div> -->
+
+
+
+
+
+<!-- <div class="container mt-4">
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="hours">Hours</label>
+          <input
+            type="number"
+            class="form-control"
+            id="hours"
+            [(ngModel)]="time.hours"
+            name="hours"
+            placeholder="HH"
+            min="0"
+            max="23"
+            required
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="minutes">Minutes</label>
+          <input
+            type="number"
+            class="form-control"
+            id="minutes"
+            [(ngModel)]="time.minutes"
+            name="minutes"
+            placeholder="MM"
+            min="0"
+            max="59"
+            required
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <button type="submit" class="btn btn-primary">Submit Time</button>
+    </div>
+  </form>
+
+  <div *ngIf="submittedTime" class="mt-4">
+    <h5>Submitted Time:</h5>
+    <p>Hours: {{ submittedTime.hours }}</p>
+    <p>Minutes: {{ submittedTime.minutes }}</p>
+  </div>
+</div>
+
+
+
+ -->

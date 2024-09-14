@@ -1,0 +1,53 @@
+<!-- <div class="booking-form">
+  <h2>Book an Appointment</h2>
+  <form (ngSubmit)="submitBooking()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="booking.name" name="name" required>
+    </div>
+    <div>
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" [(ngModel)]="booking.phone" name="phone" required>
+    </div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="booking.date" name="date" required>
+    </div>
+    <div>
+      <label for="time">Time:</label>
+      <input type="time" id="time" [(ngModel)]="booking.time" name="time" required>
+    </div>
+    <button type="submit">Book Appointment</button>
+  </form>
+   <p *ngIf="responseMessage"></p> -->
+  <!-- <p>
+    @if(responseMessage){
+      {{ responseMessage }}
+    }
+  </p>
+</div> --> 
+
+
+
+<div class="col-md-3 p-2">
+  <label for="startDate" class="form-label required">Start Date and Time</label>
+  <div class="input-fields">
+     <input
+        type="text"
+        class="form-control form-control-sm"
+        id="start_date"
+        formControlName="start_date"
+     />
+  </div>
+</div>
+<div class="col-md-3 p-2">
+  <label for="endDate" class="form-label required">End Date and Time</label>
+  <div class="input-fields">
+     <input
+        type="text"
+        class="form-control form-control-sm"
+        id="end_date"
+        formControlName="end_date"
+     />
+  </div>
+</div>
