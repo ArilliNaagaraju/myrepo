@@ -1,0 +1,91 @@
+<p>directives works!</p>
+<h2>Structral Directive</h2>
+<p>ngif Directives</p>
+<div *ngIf="MyDirective">
+    This is ngif Directives
+</div>
+<p>ngIfElse Directive</p>
+<div *ngif="islogin; else islogout">
+    is Login...
+</div>
+<div #islogout>
+    isLogout...
+</div>
+
+<h2>ngfor Directive</h2>
+<ul>
+    <li *ngFor="let L of list">
+        {{L}}
+    </li>
+</ul>
+<ol>
+    <li *ngFor="let L of list">
+        {{L}}
+    </li>
+</ol>
+<!-- Ng Switch -->
+ <h2>NgSwich</h2>
+<ul [ngSwitch]="logInName"> 
+    <li *ngSwitchCase="'user'"> 
+       <p>User is logged in..</p> 
+    </li> 
+    <li *ngSwitchCase="'admin'"> 
+       <p>admin is logged in</p> 
+    </li> 
+ </ul>
+
+ <div>
+    <ul>
+        <li option="option1">Apple</li>
+        <li option="option2">Ball</li>
+    </ul>
+</div>
+
+<div class="container"> 
+    <br/> 
+    <div *ngFor="let user of users" [ngClass]="{ 
+       'highlight':user.UserName === 'User2' 
+    }"> 
+       {{ user.UserName }} 
+    </div> 
+ </div>
+
+ <p [ngStyle]="{'color': 'blue', 'font-size': '14px'}"> 
+    paragraph style is applied using ngStyle 
+ </p>
+
+ <div appCustomDirective>
+    This is Custom Dierective of the learen with nagaraju
+ </div>
+
+
+ <!-- <div>
+    <form method="poost">
+        <label for="UserName">UserName</label>
+        <input type="text" placeholder="User Name" [(ngModel)="UserName"]>
+        <label for="Password">Password</label>
+        <input type="Password" placeholder="Password" [(ngModel)="password"]>
+        <button type="submit">Submit</button>
+    </form>
+ </div> -->
+
+ <div>
+    <form method="post">
+       <div class="container">
+          <label for="username"><b>Username</b></label>
+          <!-- <input type="text" name="username" [(ngModel)="user.username"] required> -->
+          <input type="text" name="username" [(ngModel)]="user.username" required>
+       
+          <label for="password"><b>Password</b></label>
+          <!-- <input type="password" name="password" [(ngModel)="user.password"] required> -->
+          <input type="password" name="password" [(ngModel)]="user.password" required>
+       
+          <label for="confirm_password"><b>Confirm Password</b></label>
+          <!-- <input type="password" name="confirm_password" [(ngModel)="user.confirm_password"] required> -->
+          <input type="password" name="confirm_password" [(ngModel)]="user.confirmPassword" required>
+       
+          <!-- <button type="submit" (click)="showInfo($event)">Register</button> -->
+          <button type="submit" (click)="showInfo($event)">Register</button>
+       </div>
+    </form>
+ </div>

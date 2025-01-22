@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SeatsService } from '../seats.service';
 import { NgFor } from '@angular/common';
@@ -13,6 +13,7 @@ import { SiginAndSigUpService } from '../sigin-and-sig-up.service';
 })
 export class UserDataComponent {
   seatingForm!: FormGroup;
+ @Output() parent:any;
   movieName: string = '';
   numberOfHalls: number = 0;
   currentHallIndex: number = 0; // To track which hall's data is being entered

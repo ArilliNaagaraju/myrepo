@@ -27,8 +27,8 @@ export class SiginAndSigUpService {
   }
 
 
-  // getMovieData(): Observable<any> {
-  //   return this.http.get(this.authUrl + 'movies');
-  // }
+  getMovieData(): Observable<any> {
+    return this.http.get(this.authUrl + 'movies');
+  }
   
 }

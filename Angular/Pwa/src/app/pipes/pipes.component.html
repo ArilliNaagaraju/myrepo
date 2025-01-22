@@ -1,0 +1,26 @@
+<!-- Pipes are referred as filters. It helps to transform data 
+and manage data within interpolation, denoted by {{ | }}. It accepts data, arrays, 
+integers and strings as inputs which are separated by ‘|’ symbol. This chapter explains 
+about pipes in detail. -->
+
+<div>
+    <p>Today Day:-{{PregentDate | date}}</p>
+    <p>FullDate:-{{PregentDate | date:'fullDate'}}</p>
+    <p>shortDate:-{{PregentDate | date:'shortDate'}}</p>
+    Formatted date:- {{PregentDate| date:'M/dd/yyyy'}} <br/> 
+   Hours and minutes:- {{PregentDate| date:'h:mm'}}
+   <p>FullDate:-{{PregentDate | date:'fullDate'|uppercase}}</p>
+   <p>FullDate:-{{PregentDate | date:'fullDate' | lowercase}}</p>
+</div>
+
+<!-- Built-in Pipes -->
+     <!-- AsyncPipe -->
+        <div> 
+            Seconds changing in Time: {{ timeChanges | async }}
+         </div>
+
+    <!-- CurrencyPipe -->
+
+    <div>
+        Indian Currency:-{{Currence | currency :'INR'}}
+    </div>

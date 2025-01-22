@@ -1,0 +1,26 @@
+.highlight { 
+    color: red; 
+ }
+
+ .container {
+    padding: 15px;
+ }
+ 
+ input[type=text],input[type=password] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+ }
+ 
+ button {
+    background-color: blue;
+    color: white;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+ }

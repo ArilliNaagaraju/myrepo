@@ -112,20 +112,34 @@ app.get('/movies', (req, res) => {
 
 // Save seating data
 app.post('/save-seating', (req, res) => {
-    const { theaterId, totalSeats, leftRows, middleRows, rightRows } = req.body;
+    const data = req.body;
 
-    // Example: Save data for left side rows
-    leftRows.forEach(row => {
-        const sql = 'INSERT INTO seating (theater_id, side, seats, rows) VALUES (?, ?, ?, ?)';
-        db.query(sql, [theaterId, 'left', row.seats, row.rows], (err, result) => {
-            if (err) throw err;
-        });
+    const query = `INSERT INTO seating_arrangement 
+    (movie_name, number_of_halls, total_seats, left_total_seats, left_columns, left_rows, 
+    middle_total_seats, middle_columns, middle_rows, right_total_seats, right_columns, right_rows) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+    const values = [
+        data.movie_name,
+        data.number_of_halls,
+        data.totalSeats,
+        data.leftTotalSeats,
+        data.leftColumns,
+        JSON.stringify(data.leftRows),
+        data.middleTotalSeats,
+        data.middleColumns,
+        JSON.stringify(data.middleRows),
+        data.rightTotalSeats,
+        data.rightColumns,
+        JSON.stringify(data.rightRows)
+    ];
+
+    db.query(query, values, (err, result) => {
+        if (err) {
+            return res.status(500).json({ error: err });
+        }
+        res.status(200).json({ message: 'Seating arrangement saved successfully' });
     });
-
-    // Repeat similar code for middleRows and rightRows
-    // You might want to handle these rows in a loop like above
-
-    res.send('Seating data saved successfully');
 });
 
 
